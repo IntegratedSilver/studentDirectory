@@ -1,5 +1,4 @@
 import {
-    useDisclosure,
     Button,
     Modal,
     ModalOverlay,
@@ -11,8 +10,6 @@ import {
     VStack,
     Input,
     Textarea,
-    Text,
-    Switch,
     useToast,
   } from "@chakra-ui/react";
   import { useState } from "react";
@@ -96,7 +93,7 @@ import { Student } from "./StudentTable";
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>Modal Title</ModalHeader>
+            <ModalHeader>Student Information</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
               <VStack gap={3} alignItems={"self-start"}>
@@ -116,11 +113,19 @@ import { Student } from "./StudentTable";
                   }
                 />
                 <Input
-                  type="number"
+                  type="text"
                   placeholder="Phone Number"
                   value={student.phoneNumber}
                   onChange={(e) =>
                     setStudent({ ...student, phoneNumber: e.target.value })
+                  }
+                />
+                <Input
+                  type="text"
+                  placeholder="Email"
+                  value={student.email}
+                  onChange={(e) =>
+                    setStudent({ ...student, email: e.target.value })
                   }
                 />
           
@@ -144,4 +149,3 @@ import { Student } from "./StudentTable";
   };
   
   export default StudentForm;
-  

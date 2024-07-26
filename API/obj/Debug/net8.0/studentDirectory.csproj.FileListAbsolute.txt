@@ -139,3 +139,4 @@ C:\Users\silve\Documents\Academy Full Stack\studentDirectory\api\obj\Debug\net8.
 C:\Users\silve\Documents\Academy Full Stack\studentDirectory\api\obj\Debug\net8.0\studentDirectory.pdb
 C:\Users\silve\Documents\Academy Full Stack\studentDirectory\api\obj\Debug\net8.0\studentDirectory.genruntimeconfig.cache
 C:\Users\silve\Documents\Academy Full Stack\studentDirectory\api\obj\Debug\net8.0\ref\studentDirectory.dll
+C:\Users\silve\Documents\Academy Full Stack\studentDirectory\api\obj\Debug\net8.0\studentDirectory.sourcelink.json

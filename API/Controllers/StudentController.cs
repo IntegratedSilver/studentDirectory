@@ -65,26 +65,19 @@ namespace API.Controllers
         }
         return Ok(student);
      }
-     [HttpPut ("{id:int}")]
-     public async Task<IActionResult> EditStudent (int id, Student student){
-        var studentFromDb = await _context.Students.FindAsync(id);
+       [HttpPut("{id}")]
 
-        if(studentFromDb == null){
-            return BadRequest ("Student not found");
+    public async Task<IActionResult> UpdateStudent(int id, Student student)
+    {
+        if(id != student.Id)
+        {
+            return BadRequest();
         }
+        _context.Entry(student).State = EntityState.Modified;
+        await _context.SaveChangesAsync();
 
-        studentFromDb.Name = student.Name;
-        studentFromDb.Email = student.Email;
-        studentFromDb.Address = student.Address;
-        studentFromDb.PhoneNumber = student.PhoneNumber;
-
-        var result = await _context.SaveChangesAsync();
-
-        if(result > 0){
-            return Ok("Student was edited");
-        }
-        return BadRequest("Unable to update data");
-     }
+        return Ok();
+    }
 
 
 

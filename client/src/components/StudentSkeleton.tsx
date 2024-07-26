@@ -33,7 +33,7 @@ import {
     email: string;
   }
   
-  const ProductSkeleton = () => {
+  const StudentSkeleton = () => {
     
   
     return (
@@ -42,11 +42,11 @@ import {
         <Box m={32} shadow={"md"} rounded={"md"}>
           <Flex justifyContent={"space-between"} px={"5"}>
             <Heading>
-              <Skeleton>Product List</Skeleton>
+              <Skeleton>Student List</Skeleton>
             </Heading>
             <Button color="teal.300" leftIcon={<AddIcon />}>
               {" "}
-             <Skeleton>Add Product</Skeleton>
+             <Skeleton>Add Student</Skeleton>
             </Button>
           </Flex>
   
@@ -57,9 +57,9 @@ import {
                 <Tr>
                   <Th><Skeleton>Id</Skeleton></Th>
                   <Th><Skeleton>Name</Skeleton></Th>
-                  <Th><Skeleton>Description</Skeleton></Th>
-                  <Th><Skeleton>IsinStock</Skeleton></Th>
-                  <Th isNumeric><Skeleton>Price</Skeleton></Th>
+                  <Th><Skeleton>Address</Skeleton></Th>
+                  <Th><Skeleton>Email</Skeleton></Th>
+                  <Th isNumeric><Skeleton>PhoneNumber</Skeleton></Th>
                 </Tr>
               </Thead>
               <Tbody>
@@ -69,12 +69,12 @@ import {
                     <Td>
                       <HStack>
                         <SkeletonCircle>AD</SkeletonCircle>
-                        <Text><Skeleton>Product Name</Skeleton></Text>
+                        <Text><Skeleton>Student Name</Skeleton></Text>
                       </HStack>
                     </Td>
   
                   
-                    <Td><Skeleton>Product Description</Skeleton></Td>
+                    <Td><Skeleton>Student Address</Skeleton></Td>
                     <Td>
   
                       <Badge><Skeleton>Yes</Skeleton></Badge>
@@ -99,6 +99,6 @@ import {
     );
   };
   
-  export default ProductSkeleton
+  export default StudentSkeleton
   ;
   

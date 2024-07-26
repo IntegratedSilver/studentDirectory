@@ -13,7 +13,6 @@ import {
     Thead,
     Tr,
     Text,
-    Badge,
     useDisclosure,
     Popover,
     PopoverArrow,
@@ -36,9 +35,9 @@ import StudentSkeleton from "./StudentSkeleton";
   export interface Student {
     id: number;
     name: string;
-    price: string;
-    description: string;
-    isInStore: boolean;
+    address: string;
+    email: string;
+    phoneNumber: string;
   }
   
   const StudentTable = () => {
