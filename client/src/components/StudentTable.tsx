@@ -23,6 +23,7 @@ import {
     PopoverTrigger,
     PopoverFooter,
     useToast,
+    Center,
   } from "@chakra-ui/react";
   import ColorModeSwitch from "./ColorModeSwitch";
   import { AddIcon, DeleteIcon, EditIcon, ViewIcon } from "@chakra-ui/icons";
@@ -111,12 +112,12 @@ import StudentSkeleton from "./StudentSkeleton";
     return (
       <>
         <ColorModeSwitch />
-        <Box m={32} shadow={"md"} rounded={"md"}>
+        <Box m={32} shadow={"md"} rounded={"md"} border='2px' borderColor='blue.600'  >
           <Flex justifyContent={"space-between"} px={"5"}>
             <Heading fontSize={25}>Student List</Heading>
             <Button
               onClick={() => handleAdd()}
-              color="teal.300"
+              color="blue.300"
               leftIcon={<AddIcon />}
             >
               {" "}
@@ -125,13 +126,13 @@ import StudentSkeleton from "./StudentSkeleton";
           </Flex>
   
           <TableContainer>
-            <Table variant="striped" colorScheme="teal">
+            <Table variant="striped" colorScheme="blue">
               <Thead>
                 <Tr>
                   <Th>Id</Th>
                   <Th>Name</Th>
                   <Th>Address</Th>
-                  <Th isNumeric>Phone Number</Th>
+                  <Th>Phone Number</Th>
                   <Th>Email</Th>
                 </Tr>
               </Thead>

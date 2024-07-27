@@ -11,6 +11,7 @@ import {
     Input,
     Textarea,
     useToast,
+    Box,
   } from "@chakra-ui/react";
   import { useState } from "react";
   import { BASE_URL } from "../constant";
@@ -89,7 +90,8 @@ import { Student } from "./StudentTable";
     };
   
     return (
-      <>
+        <>
+      <Box>
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
           <ModalContent>
@@ -138,12 +140,13 @@ import { Student } from "./StudentTable";
               <Button colorScheme="red" mr={3} onClick={onClose}>
                 Close
               </Button>
-              <Button onClick={onSave} colorScheme="teal">
+              <Button onClick={onSave} colorScheme="blue">
                 Save
               </Button>
             </ModalFooter>
           </ModalContent>
         </Modal>
+        </Box >
       </>
     );
   };
